@@ -31,6 +31,20 @@ app.get('/:id', function(request, response, next) {
     })
 })
 
+app.get('/googlereader/:id', function(request, response, next) {
+    var userId = request.params.id
+    if (! /^[0-9]+$/.test(userId)) return next()
+    var plus = new googlePlus.GooglePlus(process.env.GOOGLE_API_KEY)
+    plus.userGoogleReaderPosts(userId, function(error, posts) {
+        if (error) return next(error)
+        response.contentType('text/xml')
+        response.render('feed', {
+            profileUrl: 'https://plus.google.com/' + userId,
+            posts: posts,
+        })
+    })
+})
+
 // Legacy path
 app.get('/users/:id/feed', function(request, response) {
     response.redirect('/' + request.params.id, 301)
