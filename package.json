@@ -1,10 +1,10 @@
 {
-    "name": "google-plus-feed",
+    "name": "google-plus-feed-for-google-reader",
     "version": "1.0.0",
     "main": "app.js",
     "dependencies": {
         "sugar": "x",
-        "express": "2.4.x",
+        "express": "2.5.x",
         "ejs": "0.4.x",
         "jsdom": "0.2.x",
         "request": "2.0.x"
