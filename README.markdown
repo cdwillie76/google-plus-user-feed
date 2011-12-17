@@ -1,21 +1,23 @@
-# Google+ user feed
+# Google Reader RSS Feed for Google+'d Items
 
-Get Google+ user posts as an RSS feed (to export it to Twitter, Facebook, ...)
+This tool is to fill a specific need to reproduce the Google Reader RSS feed functionality
+so it can be used with publishing tools like dlvr.it which was broken when Google switched
+to the G+ method of sharing.
 
-Use it and get more information at **http://plusfeed.frosas.net/**
+This tool is a fork of https://github.com/frosas/google-plus-user-feed which is a node.js
+based application to create a RSS feed of all your public G+ posts
 
-## TODO
+## Changes made
 
-- Notify me internal errors
-- Functional testing
-  - Home and feed
-  - Use http://visionmedia.github.com/mocha/
-- Take javascript out of HTML (use require.js?)
-- Display errors inline (not as an alert)
-- Include full content into the RSS item body (to consume it as any other RSS feed)
-- Open links in the same window or a new one?
-- Mark visited links
-- Also accept user profile URL
-- Change example feed (Alireza posts every photo in its own post)
-- Some characters don't appear correctly (eg, &#39; @ http://plusfeed.frosas.net/102067232456938436649)
-- Anything to learn from https://github.com/jtwebman/GooglePlusToRSSFeed ?
+I created another URL path that will just return items that are posted by Google Reader.
+The one nice thing with with the G+ json result is that it has a lot of meta data to
+include the provider who posted the item to your G+ feed.  The new url is
+http://<server:port>/googlereader/<G+ profile id>
+
+## Install instructions
+
+These instructions are how to deploy to Heroku
+
+1. Clone this repo with your favorite Git client
+2. Follow the steps on the Heroku Node.js page: http://devcenter.heroku.com/articles/node-js
+3. ...
