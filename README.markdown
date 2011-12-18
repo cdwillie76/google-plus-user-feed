@@ -12,7 +12,7 @@ based application to create a RSS feed of all your public G+ posts
 I created another URL path that will just return items that are posted by Google Reader.
 The one nice thing with with the G+ json result is that it has a lot of meta data to
 include the provider who posted the item to your G+ feed.  The new url is
-http://[server:port]/googlereader/<G+ profile id>
+http://[server:port]/googlereader/[G+ profile id]
 
 ## Install instructions
 
@@ -26,4 +26,4 @@ These instructions are how to deploy to Heroku
 5. heroku ps (This will verify that the app is running)
 6. Run the command: heroku config:add NODE_ENV=production
 7. Run the command: heroku config:add GOOGLE_API_KEY=[api key]
-8. Open your web browser
+8. Open your web browser and go to: http://[heroku app url]/googlereader/[G+ profile id]
