@@ -10,7 +10,7 @@ based application to create a RSS feed of all your public G+ posts
 ## Changes made
 
 I created another URL path that will just return items that are posted by Google Reader.
-The one nice thing with with the G+ json result is that it has a lot of meta data to
+The one nice thing with with the G+ json result is that it has a lot of metadata to
 include the provider who posted the item to your G+ feed.  The new url is
 http://[server:port]/googlereader/[G+ profile id]
 
