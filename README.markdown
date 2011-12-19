@@ -21,6 +21,7 @@ These instructions are how to deploy to Heroku
 0. You need a Google API key in order to run this application.  Go to https://developers.google.com/+/api/ to sign up for your key
 1. Clone this repo with your favorite Git client
 2. Follow steps on the Heroku Node.js page: http://devcenter.heroku.com/articles/node-js. Below is a summary
+
 ```bash
 heroku create --stack cedar
 git push heroku master 
@@ -28,4 +29,5 @@ heroku ps
 heroku config:add NODE_ENV=production
 heroku config:add GOOGLE_API_KEY=<api key>
 ```
+
 3. Open your web browser and go to: http://[heroku app url]/googlereader/[G+ profile id]
